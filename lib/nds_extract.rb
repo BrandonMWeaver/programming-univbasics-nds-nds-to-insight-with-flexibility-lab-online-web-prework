@@ -120,7 +120,7 @@ def gross_per_studio(collection)
       totals[11] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[11]
       
-    when ""
+    when "Weinstein"
       totals[12] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[12]
       
