@@ -110,6 +110,14 @@ def gross_per_studio(collection)
       totals[11] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[11]
     end
+    if collection[index][:studio] == "Fox"
+      totals[12] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[12]
+    end
+    if collection[index][:studio] == "Alpha Films"
+      totals[13] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[13]
+    end
     index += 1
   end
   
