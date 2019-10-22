@@ -76,51 +76,51 @@ def gross_per_studio(collection)
       totals[2] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[2]
       
-    if collection[index][:studio] == "Universal"
+    when "Universal"
       totals[3] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[3]
-    end
-    if collection[index][:studio] == "Miramax"
+      
+    when "Miramax"
       totals[4] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[4]
-    end
-    if collection[index][:studio] == "Warner Brothers"
+      
+    when "Warner Brothers"
       totals[5] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[5]
-    end
-    if collection[index][:studio] == "Sony"
+      
+    when "Sony"
       totals[6] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[6]
-    end
-    if collection[index][:studio] == "Paramount"
+      
+    when "Paramount"
       totals[7] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[7]
-    end
-    if collection[index][:studio] == "Weinstein"
+      
+    when "Weinstein"
       totals[8] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[8]
-    end
-    if collection[index][:studio] == "MGM"
+      
+    when "MGM"
       totals[9] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[9]
-    end
-    if collection[index][:studio] == "Focus"
+      
+    when "Focus"
       totals[10] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[10]
-    end
-    if collection[index][:studio] == "TriStar"
+      
+    when "TriStar"
       totals[11] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[11]
-    end
-    if collection[index][:studio] == "Fox"
+      
+    when "Fox"
       totals[12] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[12]
-    end
-    if collection[index][:studio] == "Alpha Films"
+      
+    when "Alpha Films"
       totals[13] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[13]
-    end
-    if collection[index][:studio] == "Omega Films"
+      
+    when "Omega Films"
       totals[14] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[14]
     end
