@@ -62,9 +62,13 @@ def gross_per_studio(collection)
   pp collection
   index = 0
   while index < collection.size do
-    if collection[index][:studio] == "Columbia"
+    if collection[index][:studio] == "Buena Vista"
       totals[0] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[0]
+    end
+    if collection[index][:studio] == "Columbia"
+      totals[1] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[1]
     end
     index += 1
   end
