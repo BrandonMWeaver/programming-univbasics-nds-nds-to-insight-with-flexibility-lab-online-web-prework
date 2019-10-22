@@ -70,6 +70,22 @@ def gross_per_studio(collection)
       totals[1] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[1]
     end
+    if collection[index][:studio] == "Dreamworks"
+      totals[2] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[2]
+    end
+    if collection[index][:studio] == "Universal"
+      totals[3] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[3]
+    end
+    if collection[index][:studio] == "Buena Vista"
+      totals[0] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[0]
+    end
+    if collection[index][:studio] == "Columbia"
+      totals[1] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[1]
+    end
     index += 1
   end
   
