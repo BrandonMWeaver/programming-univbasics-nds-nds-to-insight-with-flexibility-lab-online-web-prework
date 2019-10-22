@@ -30,52 +30,114 @@ def movie_with_director_name(director_name, movie_data)
   }
 end
 
-
 # Your code after this point
 
 def movies_with_director_key(name, movies_collection)
-  # GOAL: For each Hash in an Array (movies_collection), provide a collection
-  # of movies and a directors name to the movie_with_director_name method
-  # and accumulate the returned Array of movies into a new Array that's
-  # returned by this method.
-  #
-  # INPUT:
-  # * name: A director's name
-  # * movies_collection: An Array of Hashes where each Hash represents a movie
-  #
-  # RETURN:
-  #
-  # Array of Hashes where each Hash represents a movie; however, they should all have a
-  # :director_name key. This addition can be done by using the provided
-  # movie_with_director_name method
+  aoh = []
+  
+  index = 0
+  while index < movies_collection.size do
+    aoh << { director_name: name, title: movies_collection }
+    index += 1
+  end
+  
+  return aoh
 end
 
-
 def gross_per_studio(collection)
-  # GOAL: Given an Array of Hashes where each Hash represents a movie,
-  # return a Hash that includes the total worldwide_gross of all the movies from
-  # each studio.
-  #
-  # INPUT:
-  # * collection: Array of Hashes where each Hash where each Hash represents a movie
-  #
-  # RETURN:
-  #
-  # Hash whose keys are the studio names and whose values are the sum
-  # total of all the worldwide_gross numbers for every movie in the input Hash
+  hash = {}
+  totals = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  
+  index = 0
+  while index < collection.size do
+    case collection[index][:studio]
+    
+    when "Alpha Films"
+      totals[13] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[13]
+      
+    when "Buena Vista"
+      totals[0] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[0]
+      
+    when "Columbia"
+      totals[1] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[1]
+      
+    when "Dreamworks"
+      totals[2] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[2]
+      
+    when "Focus"
+      totals[3] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[3]
+      
+    when "Fox"
+      totals[4] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[4]
+      
+    when "MGM"
+      totals[5] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[5]
+      
+    when "Miramax"
+      totals[6] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[6]
+      
+    when "Omega Films"
+      totals[14] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[14]
+      
+    when "Paramount"
+      totals[7] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[7]
+      
+    when "Sony"
+      totals[8] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[8]
+      
+    when "TriStar"
+      totals[9] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[9]
+      
+    when "Universal"
+      totals[10] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[10]
+      
+    when "Warner Brothers"
+      totals[11] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[11]
+      
+    when "Weinstein"
+      totals[12] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[12]
+      
+    end
+    
+    index += 1
+  end
+  
+  return hash
 end
 
 def movies_with_directors_set(source)
-  # GOAL: For each director, find their :movies Array and stick it in a new Array
-  #
-  # INPUT:
-  # * source: An Array of Hashes containing director information including
-  # :name and :movies
-  #
-  # RETURN:
-  #
-  # Array of Arrays containing all of a director's movies. Each movie will need
-  # to have a :director_name key added to it.
+  aoa = []
+  
+  index = 0
+  while index < source.size do
+    temp = []
+    
+    i = 0
+    while i < source[index][:movies].size do
+      temp << { title: source[index][:movies][i][:title], director_name: source[index][:name], studio: source[index][:movies][i][:studio], worldwide_gross: source[index][:movies][i][:worldwide_gross] }
+      i += 1
+    end
+    
+    aoa << temp
+    index += 1
+  end
+  
+  return aoa
 end
 
 # ----------------    End of Your Code Region --------------------
