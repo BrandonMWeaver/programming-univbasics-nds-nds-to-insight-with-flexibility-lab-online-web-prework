@@ -104,11 +104,11 @@ def gross_per_studio(collection)
     end
     if collection[index][:studio] == "Focus"
       totals[10] += collection[index][:worldwide_gross]
-      hash[collection[index][:studio]] = totals[8]
+      hash[collection[index][:studio]] = totals[10]
     end
     if collection[index][:studio] == "TriStar"
       totals[11] += collection[index][:worldwide_gross]
-      hash[collection[index][:studio]] = totals[9]
+      hash[collection[index][:studio]] = totals[11]
     end
     index += 1
   end
