@@ -63,8 +63,7 @@ def gross_per_studio(collection)
   
   index = 0
   while index < collection.size do
-    if !temp.include?(collection[index][:studio])
-      temp << { studio: collection[index][:studio], worldwide_gross: collection[index][:worldwide_gross] }
+    temp << { studio: collection[index][:studio], worldwide_gross: collection[index][:worldwide_gross] }
     end
     index += 1
   end
