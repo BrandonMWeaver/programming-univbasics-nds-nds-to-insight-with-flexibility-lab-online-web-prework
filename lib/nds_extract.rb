@@ -69,7 +69,7 @@ def gross_per_studio(collection)
   end
   
   pp temp
-  return hash
+  return temp
 end
 
 def movies_with_directors_set(source)
