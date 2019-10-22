@@ -72,7 +72,7 @@ def gross_per_studio(collection)
     
     i = 0
     while i < temp[:worldwide_gross][index].size do
-      total += temp[:worldwide_gross]
+      total += temp[:worldwide_gross][index]
       i += 1
     end
     index += 1
