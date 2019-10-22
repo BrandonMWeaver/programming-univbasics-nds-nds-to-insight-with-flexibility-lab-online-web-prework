@@ -58,7 +58,7 @@ def gross_per_studio(collection)
   # total of all the worldwide_gross numbers for every movie in the input Hash
   
   hash = {}
-  totals = [0,0,0,0,0]
+  totals = [0,0,0,0,0,0]
   pp collection
   index = 0
   while index < collection.size do
@@ -78,13 +78,13 @@ def gross_per_studio(collection)
       totals[3] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[3]
     end
-    if collection[index][:studio] == "Buena Vista"
-      totals[0] += collection[index][:worldwide_gross]
-      hash[collection[index][:studio]] = totals[0]
+    if collection[index][:studio] == "Miramax"
+      totals[4] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[4]
     end
-    if collection[index][:studio] == "Columbia"
-      totals[1] += collection[index][:worldwide_gross]
-      hash[collection[index][:studio]] = totals[1]
+    if collection[index][:studio] == "Warner Brothers"
+      totals[5] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[5]
     end
     index += 1
   end
