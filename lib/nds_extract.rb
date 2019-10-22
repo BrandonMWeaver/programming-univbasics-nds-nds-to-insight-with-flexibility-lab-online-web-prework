@@ -76,19 +76,19 @@ def gross_per_studio(collection)
       totals[2] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[2]
       
-    when "MGM"
+    when "Focus"
       totals[3] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[3]
       
-    when "Miramax"
+    when "Fox"
       totals[4] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[4]
       
-    when "Warner Brothers"
+    when "MGM"
       totals[5] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[5]
       
-    when "Sony"
+    when "Miramax"
       totals[6] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[6]
       
