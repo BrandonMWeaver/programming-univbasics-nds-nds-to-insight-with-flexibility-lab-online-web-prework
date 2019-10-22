@@ -96,6 +96,10 @@ def gross_per_studio(collection)
       totals[6] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[6]
       
+    when "Omega Films"
+      totals[14] += collection[index][:worldwide_gross]
+      hash[collection[index][:studio]] = totals[14]
+      
     when "Paramount"
       totals[7] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[7]
@@ -104,25 +108,22 @@ def gross_per_studio(collection)
       totals[8] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[8]
       
-    when "MGM"
+    when ""
       totals[9] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[9]
       
-    when "Focus"
+    when ""
       totals[10] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[10]
       
-    when "TriStar"
+    when ""
       totals[11] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[11]
       
-    when "Fox"
+    when ""
       totals[12] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[12]
       
-    when "Omega Films"
-      totals[14] += collection[index][:worldwide_gross]
-      hash[collection[index][:studio]] = totals[14]
     end
     
     index += 1
