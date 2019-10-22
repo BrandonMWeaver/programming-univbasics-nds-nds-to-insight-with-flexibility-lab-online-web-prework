@@ -63,18 +63,19 @@ def gross_per_studio(collection)
   index = 0
   while index < collection.size do
     case collection[index][:studio]
-      when "Buena Vista"
+    
+    when "Buena Vista"
       totals[0] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[0]
-    end
-    if collection[index][:studio] == "Columbia"
+      
+    when "Columbia"
       totals[1] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[1]
-    end
-    if collection[index][:studio] == "Dreamworks"
+      
+    when "Dreamworks"
       totals[2] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[2]
-    end
+      
     if collection[index][:studio] == "Universal"
       totals[3] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[3]
