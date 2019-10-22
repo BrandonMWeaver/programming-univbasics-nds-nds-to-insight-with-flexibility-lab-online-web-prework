@@ -76,7 +76,7 @@ def gross_per_studio(collection)
       totals[2] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[2]
       
-    when "Universal"
+    when "MGM"
       totals[3] += collection[index][:worldwide_gross]
       hash[collection[index][:studio]] = totals[3]
       
